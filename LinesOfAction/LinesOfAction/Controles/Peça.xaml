@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="LinesOfAction.Controles.Peça" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Controles="clr-namespace:LinesOfAction.Controles"
+             xmlns:Conversores="clr-namespace:LinesOfAction.Conversores" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+  <UserControl.Resources>
+    <Style TargetType="Ellipse">
+      <Setter Property="Fill"
+              Value="{Binding Path=Jogador, RelativeSource={RelativeSource AncestorType=Controles:Peça, AncestorLevel=1}, Converter={Conversores:JogadorParaCorConversor}}" />
+      <Setter Property="Stroke" Value="Black" />
+      <Setter Property="StrokeThickness" Value="3" />
+    </Style>
+  </UserControl.Resources>
+  <Ellipse />
+</UserControl>

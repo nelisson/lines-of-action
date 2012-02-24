@@ -1,0 +1,56 @@
+﻿<Window x:Class="LinesOfAction.JanelaPrincipal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controles="clr-namespace:LinesOfAction.Controles"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:extToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended" mc:Ignorable="d"
+        d:DesignHeight="545" d:DesignWidth="737" Title="JanelaPrincipal" SizeToContent="WidthAndHeight">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <Controles:Tabuleiro />
+    <StackPanel Grid.Column="1" Margin="10">
+      <StackPanel>
+
+        <GroupBox Header="Opções">
+          <StackPanel>
+            <GroupBox Header="Cor da CPU">
+              <StackPanel>
+                <RadioButton Style="{StaticResource ColorRadioButton}" IsChecked="True">
+                  <UniformGrid Style="{StaticResource RadioButtonGrid}">
+                    <Label Content="Branco" />
+                    <Label Content="(Human Vs CPU)" />
+                  </UniformGrid>
+                </RadioButton>
+                <RadioButton Style="{StaticResource ColorRadioButton}">
+                  <UniformGrid Style="{StaticResource RadioButtonGrid}">
+                    <Label>Preto</Label>
+                    <Label>(CPU Vs Human)</Label>
+                  </UniformGrid>
+                </RadioButton>
+                <RadioButton Style="{StaticResource ColorRadioButton}">
+                  <UniformGrid Style="{StaticResource RadioButtonGrid}">
+                    <Label Grid.Column="0">Nenhum</Label>
+                    <Label Grid.Column="1">(Human Vs Human)</Label>
+                  </UniformGrid>
+                </RadioButton>
+              </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Profundidade do MiniMax">
+              <extToolkit:IntegerUpDown Value="3" />
+            </GroupBox>
+          </StackPanel>
+        </GroupBox>
+
+
+        <Button Content="Iniciar!" FontSize="24" HorizontalAlignment="Center" Padding="15,0" />
+        <Button Content="reiniciar" FontSize="14" HorizontalAlignment="Center" Margin="0,10" />
+      </StackPanel>
+
+      <GroupBox Header="Status do Jogo">
+        <StackPanel></StackPanel>
+      </GroupBox>
+    </StackPanel>
+  </Grid>
+</Window>
