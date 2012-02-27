@@ -7,7 +7,7 @@
     {
         public JanelaPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
